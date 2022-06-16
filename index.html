@@ -2,11 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Nick's First Landing Page</title>
-        <link rel="stylesheet" href="./stylesheet.css">
+        <title>Nick's First Landing Page</title><!-- Title that will appear in the browser heading (i.e. the tab title) -->
+        <link rel="stylesheet" href="./stylesheet.css"><!-- Establish link to CSS stylesheet.  This is known as external styling. -->
     </head>
     <body>
         <div class="header-block">
+            <!-- To organize the background colors of this page, I decided to go with multiple "blocks," which denote the largest sections of the page, or largest units of organization. header-block is the top-most block.-->
                 <div class="header-logo">Header Logo</div>
                 <div class="header-items">
                     <span class="hi-one">Header Item 1</span>
@@ -15,14 +16,15 @@
                 </div>                
             </div>
             <div class="welcome-block">
-                <div class="welcome-text">
+                <!-- welcome-block is the next block after header-block, and carries the blue background color. -->
+                <div class="welcome-text welcome-flex">
                     <div class="hero-text"><h3>This Website is Awesome!</h3></div>
                     <p class="welcome-subtext">
                        This website has some subtext that goes here under the main title.  It's a smaller font and the color is lower contrast.
                     </p>
                     <button class="welcome-button">Sign up here!</button>
                 </div>
-                <div class="hero-image">This is a placeholder for an image.</div>
+                <div class="hero-image welcome-flex">This is a placeholder for an image.</div>
             </div>
         </div>
         <div class="middle-block">
@@ -47,7 +49,8 @@
             </div>
         </div>
         <div class="quote-block">
-            <p>This is an inspiring quote, or a testimonial from a customer.  Maybe it's just filling space, or maybe people will actually read it.  Who knows?  All I know is that it looks nice.</p>
+            <p class="quote-text">"This is an inspiring quote, or a testimonial from a customer.  Maybe it's just filling space, or maybe people will actually read it.  Who knows?  All I know is that it looks nice."</p>
+            <p class="quote-source">-The Philosopher Thor</p>
         </div>
         <div class="action-block">
             <div class="action-card">

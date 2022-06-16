@@ -1,18 +1,20 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* border: solid .5px red; */
 }
 body {
     font-size: 100%;
     margin: 0;
+    /* By default CSS applies a small margin to the body, which results in a white/empty border around the outside of the webpage.  I overrode this default by setting the margin to 0. */
 }
 p {
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     margin-left: 0;
     margin-right: 0;
   }
+  /* A bit annoyingly, CSS has a set of default settings that it applies to most elements, including p and all of the headers.  You can overrate those defaults with a declaration such as this. */
 h3 {
     display: block;
     font-size: 1.17em;
@@ -31,6 +33,7 @@ h4 {
     margin-right: 0;
     font-weight: bold;
 }
+
 .header-block,
 .welcome-block,
 .footer-block {
@@ -38,16 +41,16 @@ h4 {
     padding-left: 16%;
     padding-right: 16%;
     display: flex;
-}
+    }
+
 .header-block {
     color: #e5e7eb;
-}
+    }
 
 .header-block div {
     display: flex;
 }
 .header-logo {
-    justify-content: flex-start;
     color: #f9faf8;
     font-size: 24px;
 }
@@ -56,32 +59,43 @@ h4 {
     justify-content: flex-end;
     font-size: 18px;
 }
+.welcome-block {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.welcome-flex {
+    flex: 1 1 0;    
+}
 .hero-text {
     font-size: 3rem;
     color: #f9faf8;
 }
 .welcome-subtext {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     color: #e5e7eb
 }
 button.welcome-button {
     background-color: #3882f6;
-    border-radius: 1.2rem;
+    border-radius: 0.5rem;
     color: #f9faf8;
     border: none;
+    height: 2rem;
 }
 .hero-image {
-    margin: auto;
     color: #e5e7eb;
     background-color: gray;
+    border: solid white;
 }
 .middle-block {
-    padding: 0 16%;
+    padding: 2rem 16%;
 }
 .middle-block-header,
 .middle-block-snippets {
     display: flex;
     justify-content: center;
+}
+.middle-block-snippets {
+    padding: 2rem 0;
 }
 .mb-one,
 .mb-two,
@@ -90,6 +104,7 @@ button.welcome-button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin: 0 1rem;
 }
 .mb-illus {
@@ -100,7 +115,15 @@ button.welcome-button {
 }
 .quote-block {
     background-color: #e5e7eb;
-    padding: 1rem 16%;
+    padding: 2rem 20%;
+}
+.quote-text {
+    font-style: italic;
+}
+.quote-source {
+    text-align: right;
+    color: #1f2937;
+    font-weight: 700;
 }
 .action-block {
     padding: 1rem 16%;
