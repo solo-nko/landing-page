@@ -1,26 +1,55 @@
 * {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    border: solid .2px red;
+    border: dashed .5px red;
 }
-.upper-half,
-.footer {
+.header-block,
+.welcome-block,
+.footer-block {
     background-color: #1f2937;
-    color: #e5e7eb;
-    padding-left: 15%;
-    padding-right: 15%;
-}
-.header {
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
-    flex-direction: row;
 }
-.header div {
-    margin: 0px 1px;
+.header-block {
+    color: #e5e7eb;
+}
+
+.header-block div {
     display: flex;
 }
 .header-logo {
     justify-content: flex-start;
+    color: #f9faf8;
+    font-size: 24px;
 }
 .header-items {
     flex: 1 1 0;
     justify-content: flex-end;
+    font-size: 18px;
+}
+
+.hero-text {
+    font-size: 48px;
+    color: #f9faf8;
+}
+.welcome-subtext {
+    font-size: 18px;
+    color: #e5e7eb
+}
+.quote-block {
+    background-color: #e5e7eb;
+}
+.action-card {
+    background-color: #3882f6;
+    border-radius: 5px;
+    display: flex;
+}
+button.action-button {
+    background-color: #3882f6;
+    border: solid #f9faf8;    
+    border-radius: 25px;
+}
+.footer-block {
+    color: #e5e7eb;
+    justify-content: center;
 }
