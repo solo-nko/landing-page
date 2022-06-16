@@ -1,6 +1,9 @@
 * {
     font-family: 'roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* border: solid .5px red; */
+    border: solid .5px red;
+}
+html {
+    overflow-x: auto;
 }
 body {
     font-size: 100%;
@@ -112,6 +115,7 @@ button.welcome-button {
     border-radius: 1rem;
     height: 8rem;
     width: 8rem;
+    margin-bottom: 0.5rem;
 }
 .quote-block {
     background-color: #e5e7eb;
