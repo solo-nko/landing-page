@@ -2,12 +2,37 @@
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     border: dashed .5px red;
 }
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
 .header-block,
 .welcome-block,
 .footer-block {
     background-color: #1f2937;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
 }
 .header-block {
@@ -36,18 +61,49 @@
     font-size: 18px;
     color: #e5e7eb
 }
+button.welcome-button {
+    background-color: #3882f6;
+    border-radius: 25px;
+    color: #f9faf8;
+}
+.hero-image {
+    margin: auto;
+}
+.middle-section {
+    padding: 0 10%;
+}
 .quote-block {
     background-color: #e5e7eb;
+    padding: 0 10%;
+}
+.action-block {
+    padding: 10px 10%
 }
 .action-card {
     background-color: #3882f6;
     border-radius: 5px;
+    padding: 20px 12.5%;
+    height: 30px;
     display: flex;
+}
+.action-text {
+    display: flex;
+    flex-direction: column;
+}
+.action-text h4 {
+    color: #f9faf8;
+    flex: 1 0 auto;
+}
+.action-text p {
+    color: #e5e7eb;
+    flex: 1 0 auto;
 }
 button.action-button {
     background-color: #3882f6;
     border: solid #f9faf8;    
     border-radius: 25px;
+    color: #f9faf8;
+    flex-shrink: 1;
 }
 .footer-block {
     color: #e5e7eb;
