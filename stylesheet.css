@@ -1,6 +1,7 @@
 * {
     font-family: 'roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* border: solid .5px red; */
+    /* The red border is only there to help me visualize the various html elements better.  It's currently commented out because it's not meant to be part of the final design. */
 }
 html {
     overflow-x: auto;
@@ -72,7 +73,9 @@ h4 {
 }/* "rem" means root element.  It refers to the generic font size for the whole document.  By default, this tends to be 16px, so 4rem is effectively 4x16px.  We use rem instead of px because it scales better.  Px is an absolute value. */
 
 .welcome-flex {
-    flex: 1 1 0;    
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;    
 }
 .hero-text {
     font-size: 3rem;
@@ -93,6 +96,8 @@ button.welcome-button {
     color: #e5e7eb;
     background-color: gray;
     border: solid white;
+    margin: 2rem 2rem;
+    /* To be honest, I'm still not sure how best to position this. */
 }
 .middle-block {
     padding: 2rem 16%;
@@ -115,6 +120,8 @@ button.welcome-button {
     text-align: center;
     margin: 0 1rem;
 }
+/* mb stands for middle block.  This is for positioning the four illustration blocks in the middle of the page. */
+
 .mb-illus {
     border: solid #3882f6;
     border-radius: 1rem;
@@ -126,6 +133,7 @@ button.welcome-button {
     background-color: #e5e7eb;
     padding: 2rem 20%;
 }
+/* This next section of stuff is for the quote block. */
 .quote-text {
     font-style: italic;
 }
