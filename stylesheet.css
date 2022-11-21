@@ -53,7 +53,6 @@ footer p
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .hero-header
@@ -85,14 +84,9 @@ button:hover
     background-color: #2b65c3;
 }
 
-.hero-image
+.hero-right
 {
     grid-column: 2 / span 1;
-    grid-row: 1 / span 3;
-    align-self: center;
-    justify-self: center;
-    height: 40%;
-    width: 90%;
     text-align: center;
     background-color: #6D747D;
     border: 1px solid #efe7eb;
