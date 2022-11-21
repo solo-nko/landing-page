@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Nick's First Landing Page</title><!-- Title that will appear in the browser heading (i.e. the tab title) -->
-        <link rel="stylesheet" href="./stylesheet.css"><!-- Establish link to CSS stylesheet.  This is known as external styling. -->
-    </head>
-    <body>
-        <div class="header-block">
-            <!-- To organize the background colors of this page, I decided to go with multiple "blocks," which denote the largest sections of the page, or largest units of organization. header-block is the top-most block.-->
-                <div class="header-logo">Header Logo</div>
-                <div class="header-items">
-                    <span class="hi-one">Header Item 1</span>
-                    <span class="hi-two">Header Item 2</span>
-                    <span class="hi-three">Header Item 3</span>
-                </div>                
-            </div>
-            <div class="welcome-block">
-                <!-- welcome-block is the next block after header-block, and carries the blue background color. -->
-                <div class="welcome-text welcome-flex">
-                    <div class="hero-text"><h3>This Website is Awesome!</h3></div>
-                    <p class="welcome-subtext">
-                       This website has some subtext that goes here under the main title.  It's a smaller font and the color is lower contrast.
-                    </p>
-                    <button class="welcome-button">Sign up here!</button>
-                </div>
-                <div class="hero-image welcome-flex">This is a placeholder for an image.</div>
-            </div>
-        </div>
-        <div class="middle-block">
-            <!-- middle-block covers the area with the four illustration blocks. -->
-            <div class="middle-block-header"><h3>Some Random Information</h3></div>
-            <div class="middle-block-snippets">
-                <div class="mb-one">
-                    <div class="mb-illus">I am an illustration.</div>
-                    <p>This is middle block 1!</p>
-                </div>
-                <div class="mb-two">
-                    <div class="mb-illus">I am an illustration.</div>
-                    <p>This is middle block 2!</p>
-                </div>
-                <div class="mb-three">
-                    <div class="mb-illus">I am an illustration.</div>
-                    <p>This is middle block 3!</p>
-                </div>
-                <div class="mb-four">
-                    <div class="mb-illus">I am an illustration.</div>
-                    <p>This is middle block 4!</p>
-                </div>
-            </div>
-        </div>
-        <div class="quote-block">
-            <!-- quote-block has a gray background and covers the area with the quote paragraph -->
-            <p class="quote-text">"This is an inspiring quote, or a testimonial from a customer.  Maybe it's just filling space, or maybe people will actually read it.  Who knows?  All I know is that it looks nice."</p>
-            <p class="quote-source">-The Philosopher Thor</p>
-        </div>
-        <div class="action-block">
-            <div class="action-card">
-                <div class="action-text">
-                    <h4>Call to action! The time to act is now!</h4>
-                    <p>Subtext goes here!</p>
-                </div>                    
-                <button class="action-button">Click here to find out more!</button>
-            </div>                
-        </div>
-        <div class="footer-block">
-            <p>Copyright Nick Carmon</p>
-        </div>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Nick's First Landing Page</title><!-- Title that will appear in the browser heading (i.e. the tab title) -->
+		<link rel="stylesheet" href="./reset.css">
+		<link rel="stylesheet" href="./stylesheet.css"><!-- Establish link to CSS stylesheet.  This is known as external styling. -->
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="header-logo">Header Logo</div>
+				<div class="header-items">
+					<span class="hi-one">Header-1</span>
+					<span class="hi-two">Header-2</span>
+					<span class="hi-three">Header-3</span>
+				</div>
+			</nav>
+			<div class="hero">
+				<div class="hero-header">This website is awesome</div>
+				<div class="hero-subtext">This website has some subtext that goes here under the main title.  It's a smaller font and the color is lower contrast.</div>
+				<div class="button-container"><button>Sign up here!</button></div>
+				<div class="hero-image">
+						<div>This is a placeholder for an image</div>
+			</div>
+		</header>
+		<main>
+			<section class="middle-block">
+				<div class="middle-block-header"><h3>Some Random Information</h3></div>
+				<div class="mb-item">
+					<div class="mb-illus">I am an illustration.</div>
+					<p>This is middle block 1!</p>
+				</div>
+				<div class="mb-item">
+					<div class="mb-illus">I am an illustration.</div>
+					<p>This is middle block 2!</p>
+				</div>
+				<div class="mb-item">
+					<div class="mb-illus">I am an illustration.</div>
+					<p>This is middle block 3!</p>
+				</div>
+				<div class="mb-item">
+					<div class="mb-illus">I am an illustration.</div>
+					<p>This is middle block 4!</p>
+				</div>
+			</section>
+			<section class="quote-block">
+				<!-- quote-block has a gray background and covers the area with the quote paragraph -->
+				<p class="quote-text">"This is an inspiring quote, or a testimonial from a customer.  Maybe it's just filling space, or maybe people will actually read it.  Who knows?  All I know is that it looks nice."</p>
+				<p class="quote-source">-The Philosopher Thor</p>
+			</section>
+			<section class="action-block">
+				<div class="action-card">
+					<div class="action-text">
+						<h4>Call to action! The time to act is now!</h4>
+						<p>Subtext goes here!</p>
+					</div>                    
+					<button class="action-button">Click here to find out more!</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer-block">
+			<p>Copyright Nick Carmon</p>
+		</footer>
+	</body>
 </html>

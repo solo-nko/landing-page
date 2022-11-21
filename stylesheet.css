@@ -1,178 +1,154 @@
-* {
-    font-family: 'roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* border: solid .5px red; */
-    /* The red border is only there to help me visualize the various html elements better.  It's currently commented out because it's not meant to be part of the final design. */
-}
-html {
-    overflow-x: auto;
-}
-body {
-    font-size: 100%;
+body
+{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0;
-    /* By default CSS applies a small margin to the body, which results in a white/empty border around the outside of the webpage.  I overrode this default by setting the margin to 0. */
 }
-p {
-    display: block;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  /* A bit annoyingly, CSS has a set of default settings that it applies to most elements, including p and all of the headers.  You can overrate those defaults with a declaration such as this. */
-h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}/* More default overrides */
 
-h4 {
-    display: block;
-    font-size: 1em;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}/* More default style overrides */
-
-.header-block,
-.welcome-block,
-.footer-block {
+header
+{
+    padding: 1rem 5rem 0 5rem;
     background-color: #1f2937;
-    padding-left: 16%;
-    padding-right: 16%;
+}
+
+nav 
+{
     display: flex;
-    }/* Add background color to multiple blocks, as well as some horizontal padding.  Finally, enable flexbox on them as containers. */
+    align-items: center;
+    justify-content: space-between;
+}
 
-.header-block {
-    color: #e5e7eb;
-    }/* text color */
-
-.header-block div {
-    display: flex;
-}/* enable flexbox container */
-
-.header-logo {
-    color: #f9faf8;
+.header-logo
+{
     font-size: 24px;
 }
 
-.header-items {
-    flex: 1 1 0;
-    justify-content: right;
+.header-logo,
+.hero-header,
+footer p
+{
+    color: #f9faf8;
+}
+
+.header-items,
+.hero-subtext
+{
     font-size: 18px;
+    color: #efe7eb;
 }
 
-.welcome-block {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}/* "rem" means root element.  It refers to the generic font size for the whole document.  By default, this tends to be 16px, so 4rem is effectively 4x16px.  We use rem instead of px because it scales better.  Px is an absolute value. */
+.quote-block
+{
+    padding: 40%;
+    background-color: #efe7eb;
+}
 
-.welcome-flex {
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-basis: 0;    
-}
-.hero-text {
-    font-size: 3rem;
-    color: #f9faf8;
-}
-.welcome-subtext {
-    font-size: 1.125rem;
-    color: #e5e7eb
-}
-button.welcome-button {
-    background-color: #3882f6;
-    border-radius: 0.5rem;
-    color: #f9faf8;
-    border: none;
-    height: 2rem;
-}
-.hero-image {
-    color: #e5e7eb;
-    background-color: gray;
-    border: solid white;
-    margin: 2rem 2rem;
-    /* To be honest, I'm still not sure how best to position this. */
-}
-.middle-block {
-    padding: 2rem 16%;
-}
-.middle-block-header,
-.middle-block-snippets {
-    display: flex;
-    justify-content: center;
-}
-.middle-block-snippets {
-    padding: 2rem 0;
-}
-.mb-one,
-.mb-two,
-.mb-three,
-.mb-four {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 1rem;
-}
-/* mb stands for middle block.  This is for positioning the four illustration blocks in the middle of the page. */
-
-.mb-illus {
-    border: solid #3882f6;
-    border-radius: 1rem;
-    height: 8rem;
-    width: 8rem;
-    margin-bottom: 0.5rem;
-}
-.quote-block {
-    background-color: #e5e7eb;
-    padding: 2rem 20%;
-}
-/* This next section of stuff is for the quote block. */
-.quote-text {
+.quote-text,
+.quote-source
+{
+    color: #1f2937;
     font-style: italic;
 }
-.quote-source {
-    text-align: right;
-    color: #1f2937;
-    font-weight: 700;
+
+.hero
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
-.action-block {
-    padding: 1rem 16%;
+
+.hero-header
+{
+    font-size: 48px;
+    grid-column: 1 / span 1;
 }
-.action-card {
+
+.hero-subtext
+{
+    grid-column: 1 / span 1;
+}
+
+.button-container
+{
+    grid-column: 1 / span 1;
+}
+
+button
+{
     background-color: #3882f6;
+    border: 1px solid #efe7eb;
     border-radius: 5px;
-    padding: 1.25rem ;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
+    color: #efe7eb;
 }
-.action-text {
-    display: flex;
-    flex-direction: column;
+
+button:hover
+{
+    background-color: #2b65c3;
 }
-.action-text h4 {
-    color: #f9faf8;
-    flex: 1 0 auto;
+
+.hero-image
+{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+    align-self: center;
+    justify-self: center;
+    height: 40%;
+    width: 90%;
+    text-align: center;
+    background-color: #6D747D;
+    border: 1px solid #efe7eb;
 }
-.action-text p {
-    color: #e5e7eb;
-    flex: 1 0 auto;
+
+.middle-block
+{
+    display: grid;
+    margin: 1rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
 }
-button.action-button {
+
+.middle-block-header
+{
+    font-size: 36px;
+    color: #1f2937;
+    grid-column: 1 / span 4;
+}
+
+.mb-illus
+{
+    border: 2px solid #3882f6;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.quote-block
+{
+    margin: 1rem 0;
+    padding: 2rem 10rem;
+}
+
+.action-card
+{
     background-color: #3882f6;
-    border: solid #f9faf8;    
-    border-radius: 25px;
-    color: #f9faf8;
-    flex-shrink: 1;
+    margin: 1rem 5rem;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    border-radius: 5px;
 }
-.footer-block {
-    color: #e5e7eb;
-    justify-content: center;
+
+.action-text
+{
+    color: #efe7eb;
+}
+
+footer
+{
+    padding: 1rem 5rem 1rem 5rem;
+    background-color: #1f2937;
+    text-align: center;
 }
