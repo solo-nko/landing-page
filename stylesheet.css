@@ -1,3 +1,8 @@
+html
+{
+    min-height: 100%;
+}
+
 body
 {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -6,13 +11,13 @@ body
 
 header
 {
-    padding: 1rem 5rem 0 5rem;
     background-color: #1f2937;
 }
 
 nav 
 {
     display: flex;
+    padding: 1rem 5rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -51,13 +56,22 @@ footer p
 
 .hero
 {
+    padding: 1rem 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.hero-left
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .hero-header
 {
     font-size: 48px;
+    font-weight: 750;
     grid-column: 1 / span 1;
 }
 
@@ -104,6 +118,7 @@ button:hover
 .middle-block-header
 {
     font-size: 36px;
+    font-weight: 750;
     color: #1f2937;
     grid-column: 1 / span 4;
 }
