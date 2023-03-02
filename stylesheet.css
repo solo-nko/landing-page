@@ -1,23 +1,31 @@
 html
 {
-    min-height: 100%;
+    max-height: 100vh;
 }
 
 body
 {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    margin: 0;
+    height: 100%;
 }
 
-header
+header,
+#sect-hero
 {
     background-color: #1f2937;
+}
+
+header,
+#sect-middle,
+#sect-action,
+footer
+{
+    padding: 0 15%;
 }
 
 nav 
 {
     display: flex;
-    padding: 1rem 5rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -41,48 +49,34 @@ footer p
     color: #efe7eb;
 }
 
-.quote-block
+#sect-hero
 {
-    padding: 40%;
-    background-color: #efe7eb;
-}
-
-.quote-text,
-.quote-source
-{
-    color: #1f2937;
-    font-style: italic;
-}
-
-.hero
-{
-    padding: 1rem 5rem;
+    padding: 2rem 15%;
     display: grid;
+    gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "header image"
+        "subtext image"
+        "button image";
 }
 
-.hero-left
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.hero-header
+#sect-hero h3
 {
     font-size: 48px;
     font-weight: 750;
-    grid-column: 1 / span 1;
+    color: #f9faf8;
+    grid-area: header;
 }
 
 .hero-subtext
 {
-    grid-column: 1 / span 1;
+    grid-area: subtext;
 }
 
 .button-container
 {
-    grid-column: 1 / span 1;
+    grid-area: button;
 }
 
 button
@@ -91,6 +85,7 @@ button
     border: 1px solid #efe7eb;
     border-radius: 5px;
     color: #efe7eb;
+    font-size: 18px;
 }
 
 button:hover
@@ -98,29 +93,44 @@ button:hover
     background-color: #2b65c3;
 }
 
-.hero-right
+.hero-image
 {
-    grid-column: 2 / span 1;
-    text-align: center;
+    grid-area: image;
+    margin: auto;
+    height: 120px;
+    width: 100%;
     background-color: #6D747D;
-    border: 1px solid #efe7eb;
+    text-align: center;
+    color: #efe7eb;
+    border: #f9faf8 1px solid;
 }
 
-.middle-block
+#sect-middle
 {
+    margin: 2rem 0;
     display: grid;
-    margin: 1rem 5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 2fr;
-    justify-items: center;
+    grid-template-areas: 
+    "header header header header"
+    "mb-block mb-block mb-block mb-block";
 }
 
-.middle-block-header
+.mb-block
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    grid-area: mb-block;
+}
+
+#sect-middle h3
 {
     font-size: 36px;
     font-weight: 750;
     color: #1f2937;
-    grid-column: 1 / span 4;
+    grid-area: header;
+    text-align: center;
 }
 
 .mb-illus
@@ -128,31 +138,74 @@ button:hover
     border: 2px solid #3882f6;
     height: 100px;
     width: 100px;
+    margin: auto;
     text-align: center;
     border-radius: 15px;
 }
 
-.quote-block
+#sect-quote
 {
-    margin: 1rem 0;
-    padding: 2rem 10rem;
+    background-color: #e5e7eb;
+    margin: 2rem 0;
+    padding: 2rem 25%;
+}
+
+#quote-text
+{
+    font-style: italic;
+    font-size: 36px;
+    font-weight: light;
+    color: #1f2937;
+}
+
+#quote-source
+{
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: end;
+}
+
+#sect-action
+{
+    margin: 2rem 0;
 }
 
 .action-card
 {
     background-color: #3882f6;
-    margin: 1rem 5rem;
-    padding: 0 5rem;
-    display: flex;
-    justify-content: space-between;
+    padding: 3rem 3rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "head button"
+        "text button";
     align-items: center;
-    height: 4rem;
     border-radius: 5px;
 }
 
-.action-text
+.action-card h4,
+.action-card p
 {
+    font-size: 18px;
     color: #efe7eb;
+}
+
+.action-card h4
+{
+    font-weight: bold;
+    grid-area: head;
+}
+
+.action-card p
+{
+    grid-area: text;
+}
+
+.action-card button
+{
+    grid-area: button;
 }
 
 footer
