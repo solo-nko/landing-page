@@ -108,20 +108,20 @@ button:hover
 #sect-middle
 {
 	margin: 2rem 0;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 1fr 2fr;
-	grid-template-areas: 
-	"header header header header"
-	"mb-block mb-block mb-block mb-block";
 }
 
 .mb-block
 {
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	margin-top: 1rem;
+	gap: 10px;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(50px, 120px));
+}
+
+.mb-item
+{
 	text-align: center;
-	grid-area: mb-block;
 }
 
 #sect-middle h3
@@ -215,14 +215,16 @@ footer
 	text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-	#sect-middle
+@media screen and (max-width: 500px) {
+	#sect-hero
 	{
-		margin: 2rem 0;
+		padding: 2rem 15%;
 		display: grid;
-		grid-template-rows: 1fr 2fr;
-		grid-template-areas: 
-			"header header header header"
-			"mb-block mb-block mb-block mb-block";
+		gap: 0.5rem;
+		grid-template-areas:
+			"header"
+			"subtext"
+			"button"
+			"image";
 	}
 }
